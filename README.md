@@ -148,7 +148,7 @@ docker compose up -d postgres qdrant
 ### 2. 安装后端依赖
 
 ```powershell
-cd backend
+cd kefuAgent\backend
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
@@ -165,7 +165,7 @@ python -m venv .venv
 ```powershell
 cd kefuAgent\backend
 
-$env:DATABASE_URL = 'postgresql+psycopg://postgres:123456@localhost:5432/postgres'
+$env:DATABASE_URL = 'postgresql+psycopg://postgres:yourPassword@localhost:5432/postgres'
 $env:QDRANT_URL = 'http://localhost:6333'
 $env:KEFU_EMBEDDING_BACKEND = 'hashing'
 $env:AGENT_MODE = 'rules'
@@ -180,9 +180,9 @@ $env:AGENT_MODE = 'rules'
 继续在 `backend` 目录运行：
 
 ```powershell
-cd E:\code3\kefuAgent\backend
+cd kefuAgent\backend
 
-$env:DATABASE_URL = 'postgresql+psycopg://postgres:123456@localhost:5432/postgres'
+$env:DATABASE_URL = 'postgresql+psycopg://postgres:yourPassword@localhost:5432/postgres'
 $env:QDRANT_URL = 'http://localhost:6333'
 $env:KEFU_EMBEDDING_BACKEND = 'hashing'
 $env:AGENT_MODE = 'rules'
@@ -214,7 +214,7 @@ npm run dev
 
 ```powershell
 cd kefuAgent\backend
-$env:DATABASE_URL = 'postgresql+psycopg://postgres:123456@localhost:5432/postgres'
+$env:DATABASE_URL = 'postgresql+psycopg://postgres:yourPassword@localhost:5432/postgres'
 $env:ADMIN_USERNAME = 'admin'
 $env:ADMIN_PASSWORD = 'change-me-before-real-use'
 .\.venv\Scripts\python.exe -m scripts.seed_admin
@@ -225,14 +225,14 @@ $env:ADMIN_PASSWORD = 'change-me-before-real-use'
 前端构建：
 
 ```powershell
-cd E:\code3\kefuAgent\frontend
+cd kefuAgent\frontend
 npm run build
 ```
 
 后端测试：
 
 ```powershell
-cd E:\code3\kefuAgent\backend
+cd kefuAgent\backend
 
 $env:DATABASE_URL = 'postgresql+psycopg://postgres:123456@localhost:5432/postgres'
 $env:QDRANT_URL = 'http://localhost:6333'
@@ -244,7 +244,7 @@ $env:KEFU_EMBEDDING_BACKEND = 'hashing'
 运行评测：
 
 ```powershell
-cd E:\code3\kefuAgent\backend
+cd kefuAgent\backend
 
 $env:DATABASE_URL = 'postgresql+psycopg://postgres:123456@localhost:5432/postgres'
 $env:QDRANT_URL = 'http://localhost:6333'
@@ -263,7 +263,7 @@ $env:KEFU_EMBEDDING_BACKEND = 'hashing'
 前端轻量回归：
 
 ```powershell
-cd E:\code3\kefuAgent\frontend
+cd kefuAgent\frontend
 node tests\api.request.test.mjs
 node tests\admin-eval-trigger-source.test.mjs
 node tests\admin-layout-css.test.mjs
