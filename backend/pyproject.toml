@@ -1,0 +1,27 @@
+[project]
+name = "kefu-agent-backend"
+version = "0.1.0"
+description = "FastAPI backend for the customer support ticket automation Agent portfolio project."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0,<1.0.0",
+    "fastembed>=0.4.0,<1.0.0",
+    "qdrant-client>=1.10.0,<2.0.0",
+    "SQLAlchemy>=2.0.0,<3.0.0",
+    "psycopg[binary]>=3.2.0,<4.0.0",
+    "uvicorn[standard]>=0.30.0,<1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx>=0.27.0,<1.0.0",
+    "pytest>=8.0.0,<9.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pip-tmp/
+.testdeps/
+.venv/
+.venv312/
+venv/
+
+# Node
+node_modules/
+.npm-cache/
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local data
+postgres-data/
+qdrant-data/

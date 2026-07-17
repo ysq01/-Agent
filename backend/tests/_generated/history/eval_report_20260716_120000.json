@@ -1,0 +1,28 @@
+{
+  "mode": null,
+  "llm_available": null,
+  "llm_fallback": null,
+  "generated_at": "2026-07-16T12:00:00Z",
+  "total_cases": 0,
+  "passed_cases": 0,
+  "failed_cases": 0,
+  "metrics": {
+    "intent_accuracy": 0.0,
+    "tool_call_accuracy": 0.0,
+    "policy_hit_rate": 0.0,
+    "human_escalation_accuracy": 0.0,
+    "average_latency_ms": 0.0,
+    "auto_resolution_rate": 0.0
+  },
+  "metrics_by_intent": {},
+  "latency_percentiles": {
+    "p50_ms": 0.0,
+    "p95_ms": 0.0,
+    "max_ms": 0.0
+  },
+  "failure_reason_counts": {},
+  "results": [],
+  "tool_call_match_strategy": "Deduplicated set exact match over Agent actions.tool_name; None values are ignored.",
+  "policy_hit_strategy": "A case is a policy hit when any expected_policy_keywords value appears in policy_sources.policy_title or policy_sources.source_file.",
+  "database_write_strategy": "The default script runs Agent calls inside an outer database transaction and rolls it back after writing reports, so eval-created or escalated tickets do not persist unless persist mode is explicitly used."
+}

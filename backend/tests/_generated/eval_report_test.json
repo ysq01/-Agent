@@ -1,0 +1,59 @@
+{
+  "mode": null,
+  "llm_available": null,
+  "llm_fallback": null,
+  "generated_at": "2026-07-16T12:00:00Z",
+  "total_cases": 1,
+  "passed_cases": 1,
+  "failed_cases": 0,
+  "metrics": {
+    "intent_accuracy": 1.0,
+    "tool_call_accuracy": 1.0,
+    "policy_hit_rate": 1.0,
+    "human_escalation_accuracy": 1.0,
+    "average_latency_ms": 14.0,
+    "auto_resolution_rate": 1.0
+  },
+  "metrics_by_intent": {},
+  "latency_percentiles": {
+    "p50_ms": 0.0,
+    "p95_ms": 0.0,
+    "max_ms": 0.0
+  },
+  "failure_reason_counts": {},
+  "results": [
+    {
+      "id": "EVAL-TEST-001",
+      "user_message": "ORD-2026-0002 商品坏了我要退款",
+      "expected_intent": "refund_request",
+      "actual_intent": "refund_request",
+      "expected_tools": [
+        "search_policy"
+      ],
+      "actual_tools": [
+        "search_policy"
+      ],
+      "expected_need_human": false,
+      "actual_need_human": false,
+      "expected_policy_keywords": [
+        "七天无理由"
+      ],
+      "actual_policy_sources": [
+        {
+          "policy_title": "七天无理由退货规则",
+          "source_file": "seven_day_return.md",
+          "score": 0.91
+        }
+      ],
+      "latency_ms": 14.0,
+      "reply": "ok",
+      "actions": [],
+      "passed": true,
+      "failure_reasons": [],
+      "policy_hit": true
+    }
+  ],
+  "tool_call_match_strategy": "Deduplicated set exact match over Agent actions.tool_name; None values are ignored.",
+  "policy_hit_strategy": "A case is a policy hit when any expected_policy_keywords value appears in policy_sources.policy_title or policy_sources.source_file.",
+  "database_write_strategy": "The default script runs Agent calls inside an outer database transaction and rolls it back after writing reports, so eval-created or escalated tickets do not persist unless persist mode is explicitly used."
+}
