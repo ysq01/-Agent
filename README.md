@@ -163,7 +163,7 @@ python -m venv .venv
 ### 3. 初始化数据库和政策知识库
 
 ```powershell
-cd E:\code3\kefuAgent\backend
+cd kefuAgent\backend
 
 $env:DATABASE_URL = 'postgresql+psycopg://postgres:123456@localhost:5432/postgres'
 $env:QDRANT_URL = 'http://localhost:6333'
